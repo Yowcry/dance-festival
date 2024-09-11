@@ -71,6 +71,15 @@ nav ul li a:hover {
     background-color: #454545;
 }
 
+.full-width-image img {
+    width: 100%;           /* Make the image take up the full width of the page */
+    height: auto;          /* Maintain aspect ratio */
+    display: block;        /* Remove any inline space */
+    margin: 0;             /* Remove default margins */
+    padding: 0;            /* Remove default padding */
+    object-fit: cover;     /* Ensures the image covers the space without stretching */
+}
+
 .content-section h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
