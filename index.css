@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -11,10 +12,9 @@ body {
     background-color: #121212;
 }
 
+/* Hero Section (Header) */
 .hero {
-    background-image: url('https://example.com/indonesian-dance-background-dark.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #222;
     padding: 100px 20px;
     text-align: center;
     color: #f0f0f0;
@@ -49,35 +49,27 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Full-Width Image Section */
+.full-width-image {
+    margin: 0;
+    padding: 0;
+}
+
+.full-width-image img {
+    width: 100%;           /* Full width */
+    height: auto;          /* Maintain aspect ratio */
+    display: block;        /* Block display to remove spacing */
+    margin: 0 auto;        /* Center the image */
+    object-fit: cover;     /* Ensures the image covers the space without stretching */
+    border: 0;             /* Removes default border */
+}
+
+/* Section Styles */
 .content-section {
     padding: 80px 20px;
     text-align: center;
     color: #e0e0e0;
-}
-
-#home {
     background-color: #1f1f1f;
-}
-
-#staff {
-    background-color: #2c2c2c;
-}
-
-#hotel {
-    background-color: #383838;
-}
-
-#dances {
-    background-color: #454545;
-}
-
-.full-width-image img {
-    width: 100%;           /* Make the image take up the full width of the page */
-    height: auto;          /* Maintain aspect ratio */
-    display: block;        /* Remove any inline space */
-    margin: 0;             /* Remove default margins */
-    padding: 0;            /* Remove default padding */
-    object-fit: cover;     /* Ensures the image covers the space without stretching */
 }
 
 .content-section h2 {
@@ -93,6 +85,7 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
+/* Registration Form Styling */
 .registration-form {
     display: flex;
     flex-direction: column;
@@ -137,6 +130,7 @@ nav ul li a:hover {
     background-color: #777;
 }
 
+/* Footer */
 footer {
     background-color: #1c1c1c;
     color: #f0f0f0;
@@ -152,6 +146,7 @@ footer p {
     letter-spacing: 1px;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5em;
