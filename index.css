@@ -1,4 +1,8 @@
 /* Reset and Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,38 +19,88 @@ body {
 /* Hero Section (Header) */
 .hero {
     background-color: #222;
-    padding: 80px 20px;  /* Adjusted for mobile */
+    padding: 80px 20px;
     text-align: center;
     color: #f0f0f0;
+    position: relative;
 }
 
 .hero h1 {
-    font-size: 2.5em;  /* Adjusted for smaller screens */
-    letter-spacing: 1px;
+    font-size: 3em;
+    letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-nav ul {
-    list-style-type: none;
-    margin-top: 20px;
+/* Navigation Container */
+.nav-container {
+    background-color: #333;  /* Background color for navigation */
+    padding: 20px 0;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0 10px;
+/* Navigation Styles */
+.nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Center the navigation links */
 }
 
-nav ul li a {
-    color: #f0f0f0;
+.nav__link {
+    --spacing: 1em;
     text-decoration: none;
-    font-size: 1em;  /* Adjusted for smaller screens */
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    color: inherit;
+    display: inline-block;
+    padding: calc(var(--spacing) / 2) var(--spacing);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    color: #ffffff;  /* Inherit white color */
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.nav__link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: var(--spacing);
+    right: var(--spacing);
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transition: transform 150ms ease-in-out;
+}
+
+.nav__link:hover::after {
+    transform: scaleX(1);
+}
+
+/* New Register Container with Different Background */
+.register-container {
+    background-color: #555;  /* Different background color for Register section */
+    display: flex;           /* Use flexbox to center the link */
+    justify-content: center;  /* Horizontally center the link */
+    align-items: center;      /* Vertically center the link */
+    height: 100px;            /* Fixed height */
+}
+
+/* Style for Register Button */
+.register-btn {
+    background-color: limegreen;
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.register-btn:hover {
+    background-color: #333;
+    color: limegreen;
 }
 
 /* Full-Width Image Section */
@@ -66,20 +120,20 @@ nav ul li a:hover {
 
 /* Section Styles */
 .content-section {
-    padding: 60px 20px;  /* Adjusted for mobile */
+    padding: 60px 20px;
     text-align: center;
     color: #e0e0e0;
     background-color: #1f1f1f;
 }
 
 .content-section h2 {
-    font-size: 2.2em;   /* Adjusted for mobile */
+    font-size: 2.5em;
     margin-bottom: 20px;
     color: #f0f0f0;
 }
 
 .content-section p {
-    font-size: 1.1em;  /* Adjusted for mobile */
+    font-size: 1.2em;
     color: #c0c0c0;
     max-width: 800px;
     margin: 0 auto;
@@ -90,17 +144,17 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 350px;  /* Adjusted for mobile */
+    max-width: 400px;
     margin: 0 auto;
     background-color: #2c2c2c;
-    padding: 20px;   /* Adjusted for mobile */
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .registration-form label {
-    margin-top: 15px;
-    font-size: 1.1em;   /* Adjusted for mobile */
+    margin-top: 20px;
+    font-size: 1.2em;
     color: #e0e0e0;
 }
 
@@ -134,7 +188,7 @@ nav ul li a:hover {
 footer {
     background-color: #1c1c1c;
     color: #f0f0f0;
-    padding: 15px 0;  /* Adjusted for mobile */
+    padding: 20px 0;
     text-align: center;
     position: relative;
     width: 100%;
@@ -152,12 +206,18 @@ footer p {
         font-size: 2em;   /* Reduced size for smaller screens */
     }
 
-    nav ul li a {
-        font-size: 0.9em;  /* Reduced size for smaller screens */
+    .nav__list {
+        flex-direction: column;   /* Stack the links vertically on smaller screens */
+        align-items: center;
     }
 
-    .content-section h2 {
-        font-size: 1.8em;  /* Reduced size for smaller screens */
+    .nav__link {
+        font-size: 1.2rem;  /* Reduced font size for smaller screens */
+        padding: 12px 30px;  /* Increase padding for better touch experience */
+    }
+
+    .content-section {
+        padding: 40px 20px;
     }
 
     .registration-form {
@@ -167,9 +227,5 @@ footer p {
 
     .registration-form input[type="submit"] {
         width: 100%;  /* Full width for submit button on mobile */
-    }
-
-    .content-section {
-        padding: 40px 20px;  /* Reduced padding for smaller screens */
     }
 }
