@@ -32,14 +32,18 @@
 
     <!-- Full-Width Image Section -->
     <section class="full-width-image">
-            <img src="https://i.ibb.co/ww4TgkL/Jakarta-Dance-Festival.png" alt="Jakarta Dance Festival" border="0">
-        </a>
+        <img src="https://i.ibb.co/ww4TgkL/Jakarta-Dance-Festival.png" alt="Jakarta Dance Festival" border="0">
     </section>
 
     <!-- Registration Section -->
     <section id="registration" class="content-section">
         <h2>Register for the Festival</h2>
-        <form action="submit_form.php" method="POST" class="registration-form">
+        <form action="https://formsubmit.co/4ebb70ecef611e9bf1eba24b432d38b4" method="POST" class="registration-form">
+            <!-- Hidden inputs to configure FormSubmit -->
+            <input type="hidden" name="_next" value="https://indonesiadancefestival.com/thank-you">
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Form fields -->
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
             
