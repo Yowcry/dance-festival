@@ -243,5 +243,16 @@ footer p {
     color: white;
 }
 
+/* Style for the hotel information list */
+#hotel-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#hotel-info ul li {
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: #333;
+}
 
 
