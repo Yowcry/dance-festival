@@ -229,3 +229,19 @@ footer p {
         width: 100%;  /* Full width for submit button on mobile */
     }
 }
+
+    /* Style the staff list */
+#staff-list ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#staff-list ul li {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+
+
