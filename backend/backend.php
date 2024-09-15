@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
 
-    $to = "parahcorona@yahoo.com";
+    $to = "indonesiadancefestival@gmail.com";
     $subject = "New Registration for Indonesia International Dance Festival";
     $message = "Name: " . $name . "\nEmail: " . $email;
     $headers = "From: no-reply@yourdomain.com\r\n";
