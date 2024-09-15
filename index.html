@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indonesia International Dance Festival - Registration</title>
-    <link rel="stylesheet" href="/css/index.css">
-</head>
 <body>
     <header>
         <div class="hero">
@@ -22,35 +14,35 @@
                 </ul>
             </nav>
         </div>
-
-        <div class="register-container">
-            <a href="#registration" class="nav__link nav__link--btn nav__link--btn--highlight">Register</a>
-        </div>
     </header>
 
-    <section class="full-width-image">
-        <img src="https://i.ibb.co/ww4TgkL/Jakarta-Dance-Festival.png" alt="Jakarta Dance Festival" border="0">
-    </section>
+    <!-- Main content wrapper -->
+    <div class="main-content">
+        <section class="full-width-image">
+            <img src="https://i.ibb.co/ww4TgkL/Jakarta-Dance-Festival.png" alt="Jakarta Dance Festival" border="0">
+        </section>
 
-    <section id="registration" class="content-section">
-        <h2>Register for the Festival</h2>
-        <form action="https://formspree.io/f/xnnaydyo" method="POST" class="registration-form">
-            <input type="hidden" name="_next" value="https://indonesiadancefestival.com/thank-you">
-            <input type="hidden" name="_captcha" value="false">
+        <section id="registration" class="content-section">
+            <h2>Register for the Festival</h2>
+            <form action="https://formspree.io/f/xnnaydyo" method="POST" class="registration-form">
+                <input type="hidden" name="_next" value="https://indonesiadancefestival.com/thank-you">
+                <input type="hidden" name="_captcha" value="false">
 
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <input type="submit" value="Register">
-        </form>
-    </section>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <input type="submit" value="Register">
+            </form>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2024 Indonesia International Dance Festival. All Rights Reserved.</p>
     </footer>
+
+    <!-- Link to the JavaScript file -->
     <script src="transition.js"></script>
 </body>
-</html>
