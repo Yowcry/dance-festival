@@ -1,7 +1,14 @@
 document.querySelectorAll('.nav__link').forEach(link => {
     link.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent default anchor behavior
-        
+        const href = this.getAttribute('href');
+
+        // If the link is an internal link (starts with '#'), skip the transition
+        if (href.startsWith('#')) {
+            return;
+        }
+
+        e.preventDefault(); // Prevent default anchor behavior for external links
+
         // Apply the opacity transition only to the .main-content
         const content = document.querySelector('.main-content');
         content.style.transition = "opacity 0.5s ease"; // Set the transition
