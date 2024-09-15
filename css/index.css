@@ -43,6 +43,7 @@ body {
     justify-content: center;
 }
 
+/* transition */
 .nav__link {
     --spacing: 1em;
     text-decoration: none;
@@ -54,6 +55,12 @@ body {
     letter-spacing: 2px;
     font-size: 1.4rem;
     color: #ffffff;
+    opacity: 1;  /* Set initial opacity */
+    transition: opacity 0.3s ease;  /* Add transition for opacity */
+}
+
+.nav__link:active {
+    opacity: 0.5;  /* Reduce opacity when the link is clicked */
 }
 
 .nav__link:after {
@@ -243,7 +250,6 @@ footer p {
     color: white;
 }
 
-
 /* hotel */
 #hotel-info ul {
     list-style-type: none;
@@ -255,28 +261,3 @@ footer p {
     margin: 15px 0;
     color: white;
 }
-
-/* transition */
-.nav__link {
-    --spacing: 1em;
-    text-decoration: none;
-    color: inherit;
-    display: inline-block;
-    padding: calc(var(--spacing) / 2) var(--spacing);
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1.4rem;
-    color: #ffffff;
-    opacity: 1;  /* Set initial opacity */
-    transition: opacity 0.3s ease;  /* Add transition for opacity */
-}
-
-.nav__link:active {
-    opacity: 0.5;  /* Reduce opacity when the link is clicked */
-}
-
-.nav__link:hover::after {
-    transform: scaleX(1);
-}
-
