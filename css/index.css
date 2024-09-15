@@ -13,6 +13,8 @@ body {
     line-height: 1.6;
     color: #e0e0e0;
     background-color: #121212;
+    opacity: 1; /* Ensure opacity starts at 1 */
+    transition: opacity 0.5s ease; /* Add transition to the body */
 }
 
 /* header */
@@ -43,7 +45,6 @@ body {
     justify-content: center;
 }
 
-/* transition */
 .nav__link {
     --spacing: 1em;
     text-decoration: none;
@@ -55,12 +56,6 @@ body {
     letter-spacing: 2px;
     font-size: 1.4rem;
     color: #ffffff;
-    opacity: 1;  /* Set initial opacity */
-    transition: opacity 0.3s ease;  /* Add transition for opacity */
-}
-
-.nav__link:active {
-    opacity: 0.5;  /* Reduce opacity when the link is clicked */
 }
 
 .nav__link:after {
