@@ -3,23 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const content = document.querySelector('.content-section');
     const image = document.querySelector('.full-width-image img');
     
-    // Apply the same transition for both the content-section and the image (0.75s)
-    content.style.transition = "opacity 0.75s ease, transform 0.75s ease";
-    content.style.opacity = 0;
-    content.style.transform = "rotateX(-10deg)";
-    
-    image.style.transition = "opacity 0.75s ease, transform 0.75s ease";
-    image.style.opacity = 0;
-    image.style.transform = "rotateX(-10deg)";
-    
-    // Trigger the animation after a small delay
-    setTimeout(() => {
-        content.style.opacity = 1;
-        content.style.transform = "rotateX(0)";
+    if (content) {
+        // Apply the same transition for both the content-section and the image (0.75s)
+        content.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+        content.style.opacity = 0;
+        content.style.transform = "rotateX(-10deg)";
         
-        image.style.opacity = 1;
-        image.style.transform = "rotateX(0)";
-    }, 100); // Delay to ensure the transition takes place
+        setTimeout(() => {
+            content.style.opacity = 1;
+            content.style.transform = "rotateX(0)";
+        }, 100); // Delay to ensure the transition takes place
+    }
+    
+    if (image) {
+        image.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+        image.style.opacity = 0;
+        image.style.transform = "rotateX(-10deg)";
+        
+        setTimeout(() => {
+            image.style.opacity = 1;
+            image.style.transform = "rotateX(0)";
+        }, 100); // Delay to ensure the transition takes place
+    }
 });
 
 document.querySelectorAll('.nav__link').forEach(link => {
@@ -37,13 +42,17 @@ document.querySelectorAll('.nav__link').forEach(link => {
         const content = document.querySelector('.content-section');
         const image = document.querySelector('.full-width-image img');
         
-        content.style.transition = "opacity 0.75s ease, transform 0.75s ease";
-        content.style.opacity = 0;
-        content.style.transform = "rotateX(-10deg)";
-        
-        image.style.transition = "opacity 0.75s ease, transform 0.75s ease";
-        image.style.opacity = 0;
-        image.style.transform = "rotateX(-10deg)";
+        if (content) {
+            content.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+            content.style.opacity = 0;
+            content.style.transform = "rotateX(-10deg)";
+        }
+
+        if (image) {
+            image.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+            image.style.opacity = 0;
+            image.style.transform = "rotateX(-10deg)";
+        }
 
         // After the transition ends, navigate to the clicked link
         setTimeout(() => {
