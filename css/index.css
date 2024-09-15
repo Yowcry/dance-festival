@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 html {
     scroll-behavior: smooth;
 }
@@ -16,7 +15,7 @@ body {
     background-color: #121212;
 }
 
-/* Hero Section (Header) */
+/* header */
 .hero {
     background-color: #222;
     padding: 80px 20px;
@@ -31,19 +30,17 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Navigation Container */
 .nav-container {
-    background-color: #333;  /* Background color for navigation */
+    background-color: #333;
     padding: 20px 0;
 }
 
-/* Navigation Styles */
 .nav__list {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;  /* Center the navigation links */
+    justify-content: center;
 }
 
 .nav__link {
@@ -56,7 +53,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1.4rem;
-    color: #ffffff;  /* Inherit white color */
+    color: #ffffff;
 }
 
 .nav__link:after {
@@ -75,16 +72,15 @@ body {
     transform: scaleX(1);
 }
 
-/* New Register Container with Different Background */
 .register-container {
-    background-color: #555;  /* Different background color for Register section */
-    display: flex;           /* Use flexbox to center the link */
-    justify-content: center;  /* Horizontally center the link */
-    align-items: center;      /* Vertically center the link */
-    height: 100px;            /* Fixed height */
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 }
 
-/* Style for Register Button */
+/* registration button */
 .register-btn {
     background-color: limegreen;
     color: #333;
@@ -103,22 +99,21 @@ body {
     color: limegreen;
 }
 
-/* Full-Width Image Section */
+/* image */
 .full-width-image {
     margin: 0;
     padding: 0;
 }
 
 .full-width-image img {
-    width: 100%;           /* Full width */
-    height: auto;          /* Maintain aspect ratio */
-    display: block;        /* Block display to remove spacing */
-    margin: 0 auto;        /* Center the image */
-    object-fit: cover;     /* Ensures the image covers the space without stretching */
-    border: 0;             /* Removes default border */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    border: 0;
 }
 
-/* Section Styles */
 .content-section {
     padding: 60px 20px;
     text-align: center;
@@ -139,7 +134,7 @@ body {
     margin: 0 auto;
 }
 
-/* Registration Form Styling */
+/* registration */
 .registration-form {
     display: flex;
     flex-direction: column;
@@ -184,7 +179,7 @@ body {
     background-color: #777;
 }
 
-/* Footer */
+/* footer */
 footer {
     background-color: #1c1c1c;
     color: #f0f0f0;
@@ -200,20 +195,19 @@ footer p {
     letter-spacing: 1px;
 }
 
-/* Responsive Design for Mobile Screens */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2em;   /* Reduced size for smaller screens */
+        font-size: 2em;
     }
 
     .nav__list {
-        flex-direction: column;   /* Stack the links vertically on smaller screens */
+        flex-direction: column;
         align-items: center;
     }
 
     .nav__link {
-        font-size: 1.2rem;  /* Reduced font size for smaller screens */
-        padding: 12px 30px;  /* Increase padding for better touch experience */
+        font-size: 1.2rem;
+        padding: 12px 30px;
     }
 
     .content-section {
@@ -221,16 +215,16 @@ footer p {
     }
 
     .registration-form {
-        max-width: 100%;   /* Full width on mobile */
-        padding: 20px;     /* Adjusted padding for smaller screens */
+        max-width: 100%;
+        padding: 20px;
     }
 
     .registration-form input[type="submit"] {
-        width: 100%;  /* Full width for submit button on mobile */
+        width: 100%;
     }
 }
 
-/* Style for the staff list */
+/* staff */
 #staff-list ul {
     list-style-type: none;
     padding: 0;
@@ -250,7 +244,7 @@ footer p {
 }
 
 
-/* Style for the hotel information list */
+/* hotel */
 #hotel-info ul {
     list-style-type: none;
     padding: 0;
