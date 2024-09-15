@@ -2,8 +2,10 @@ document.querySelectorAll('.nav__link').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault(); // Prevent default anchor behavior
         
-        document.body.style.transition = "opacity 0.5s ease"; // Set the transition
-        document.body.style.opacity = 0; // Fade out the content
+        // Apply the opacity transition only to the .main-content
+        const content = document.querySelector('.main-content');
+        content.style.transition = "opacity 0.5s ease"; // Set the transition
+        content.style.opacity = 0; // Fade out the main content
 
         // After the transition ends, navigate to the clicked link
         setTimeout(() => {
