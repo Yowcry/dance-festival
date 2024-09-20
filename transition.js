@@ -1,10 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Apply animation to the content-section and the image on page load
+    // Get the current URL path
+    const currentPath = window.location.pathname;
+
+    // Redirect from specific pages to new paths without .html
+    if (currentPath === "/index.html") {
+        window.history.replaceState({}, '', '/home');
+    } else if (currentPath === "/staff.html") {
+        window.history.replaceState({}, '', '/staff');
+    } else if (currentPath === "/hotels.html") {
+        window.history.replaceState({}, '', '/hotel');
+    }
+
+    // Animation for content and image
     const content = document.querySelector('.content-section');
     const image = document.querySelector('.full-width-image img');
-    
+
     if (content) {
-        // Apply the same transition for both the content-section and the image (0.75s)
         content.style.transition = "opacity 0.75s ease, transform 0.75s ease";
         content.style.opacity = 0;
         content.style.transform = "rotateX(-10deg)";
@@ -12,9 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             content.style.opacity = 1;
             content.style.transform = "rotateX(0)";
-        }, 100); // Delay to ensure the transition takes place
+        }, 100);
     }
-    
+
     if (image) {
         image.style.transition = "opacity 0.75s ease, transform 0.75s ease";
         image.style.opacity = 0;
@@ -23,40 +34,36 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             image.style.opacity = 1;
             image.style.transform = "rotateX(0)";
-        }, 100); // Delay to ensure the transition takes place
+        }, 100);
     }
-});
 
-document.querySelectorAll('.nav__link').forEach(link => {
-    link.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
+    // Handle navigation link click animations
+    document.querySelectorAll('.nav__link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
 
-        // If the link is an internal link (starts with '#'), skip the transition
-        if (href.startsWith('#')) {
-            return;
-        }
+            // Check if it's an internal link (hash link)
+            if (href.startsWith('#')) {
+                return;
+            }
 
-        e.preventDefault(); // Prevent default anchor behavior for external links
+            e.preventDefault();
 
-        // Apply the transition to both the content-section and the image (0.75s)
-        const content = document.querySelector('.content-section');
-        const image = document.querySelector('.full-width-image img');
-        
-        if (content) {
-            content.style.transition = "opacity 0.75s ease, transform 0.75s ease";
-            content.style.opacity = 0;
-            content.style.transform = "rotateX(-10deg)";
-        }
+            if (content) {
+                content.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+                content.style.opacity = 0;
+                content.style.transform = "rotateX(-10deg)";
+            }
 
-        if (image) {
-            image.style.transition = "opacity 0.75s ease, transform 0.75s ease";
-            image.style.opacity = 0;
-            image.style.transform = "rotateX(-10deg)";
-        }
+            if (image) {
+                image.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+                image.style.opacity = 0;
+                image.style.transform = "rotateX(-10deg)";
+            }
 
-        // After the transition ends, navigate to the clicked link
-        setTimeout(() => {
-            window.location.href = this.href;
-        }, 750); // Wait for the transition to complete (0.75 seconds)
+            setTimeout(() => {
+                window.location.href = href;
+            }, 750);
+        });
     });
 });
